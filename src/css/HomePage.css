@@ -44,3 +44,27 @@
     border: none;
     color: #000;
 }
+
+@media (max-width: 768px) {
+    .homepage {
+        background-position: center;
+        background-size: cover;
+        height: 80vh;
+    }
+
+    .homepage-text {
+        height: auto;
+        gap: 20px;
+    }
+
+    .homepage-text h4 {
+        font-size: 30px;
+        width: 90%;
+    }
+
+    .homebutton {
+        width: 120px;
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+}

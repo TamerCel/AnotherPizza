@@ -6,28 +6,7 @@ import PizzaForm from '../components/PizzaForm';
 import PizzaInfo from '../components/PizzaInfo';
 import Header from '../components/Header';
 import '../css/OrderPage.css';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import '../css/ResetButton.css';
 
 
 function OrderPage({ onBack, onSuccess }) {
@@ -100,10 +79,25 @@ function OrderPage({ onBack, onSuccess }) {
         }
     };
 
+    const handleReset = () => {
+        setOrder({
+            username: "",
+            pizzaCount: 1,
+            selectedSize: "orta",
+            selectedDough: "normal",
+            selectedToppings: [],
+            orderNote: "",
+            pizzaName: malzemeData[pizzaIndex].name,
+        });
+    };
+
     return (
         <div>
             <Header onBack={onBack} />
             <section>
+                <div className="reset-container">
+                    <button className="reset-button" onClick={handleReset} data-cy="reset-order">Sıfırla</button>
+                </div>
                 <PizzaInfo pizza={malzemeData[pizzaIndex]} />
                 <PizzaForm
                     order={order}

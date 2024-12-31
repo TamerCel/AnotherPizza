@@ -13,7 +13,7 @@ function SuccessPage({ onBack }) {
                 <p data-cy="success-order-received">SİPARİŞİNİZ ALINDI!</p>
             </div>
             <div className="success-button">
-                <button onClick={onBack} data-cy="back-to-home">Anasayfaya Dön</button>
+                <button onClick={onBack} data-cy="back-to-home">Anasayfa</button>
             </div>
         </div>
     );

@@ -44,3 +44,20 @@
     font-weight: 200;
     letter-spacing: -.072em;
 }
+
+@media (max-width: 768px) {
+    .success-page {
+        height: 80vh;
+        gap: 15vh;
+    }
+
+    .success-message p {
+        font-size: 40px;
+    }
+
+    .success-button button {
+        width: 100px;
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+}
