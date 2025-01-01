@@ -6,8 +6,8 @@ function PizzaForm({ order, updateOrder, handleToppingChange, errorMessage }) {
 
     return (
         <Form>
-            <FormGroup className="pizza-sizes" data-cy="pizza-sizes">
-                <div className="dough-size" data-cy="dough-size">
+            <FormGroup className="pizza-sizes" data-cy="test-pizzasize">
+                <div className="dough-size" data-cy="test-doughsize">
                     <Label className='dough-header'>Boyut Seç</Label>
                     {['kucuk', 'orta', 'buyuk'].map((size) => (
                         <div className="dough-option" key={size}>
@@ -24,7 +24,7 @@ function PizzaForm({ order, updateOrder, handleToppingChange, errorMessage }) {
                         </div>
                     ))}
                 </div>
-                <div className='dough-thickness' data-cy="dough-thickness">
+                <div className='dough-thickness' data-cy="test-doughthickness">
                     <Label>Hamur Seç</Label>
                     <select
                         name="hamur"
@@ -37,11 +37,11 @@ function PizzaForm({ order, updateOrder, handleToppingChange, errorMessage }) {
                     </select>
                 </div>
             </FormGroup>
-            <FormGroup className='extras' data-cy="extras">
+            <FormGroup className='extras' data-cy="test-extras">
                 <Label className='extras-header'>Ek Malzemeler</Label>
                 <p>(En az 4 malzeme seçmelisiniz)</p>
                 {errorMessage && <p className="error-message" style={{ color: "#e91212" }}>*{errorMessage}</p>}
-                <div className='extra-elements' data-cy="extra-elements">
+                <div className='extra-elements' data-cy="test-ekstra-malzeme">
                     {toppings.map((topping) => (
                         <Label key={topping} className='extra-item' data-cy={`extra-item-${topping}`}>
                             <input
@@ -57,7 +57,7 @@ function PizzaForm({ order, updateOrder, handleToppingChange, errorMessage }) {
                     ))}
                 </div>
             </FormGroup>
-            <FormGroup className='customer-note' data-cy="customer-note">
+            <FormGroup className='customer-note' data-cy="test-customer-note">
                 <Label>İsminiz</Label>
                 <Input
                     type="text"

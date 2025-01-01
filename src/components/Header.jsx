@@ -3,7 +3,7 @@ import React from 'react';
 function Header({ onBack }) {
     return (
         <header>
-            <img src="../../images/iteration-1-images/logo.svg" alt="" data-cy="header-logo" />
+            <img src="../../images/iteration-1-images/logo.svg" alt="" data-cy="test-header-logo" />
             <div className="order-header-buttons">
                 <button onClick={onBack} data-cy="returnhome-button">Anasayfa</button>
                 <p>-</p>
